@@ -10,30 +10,46 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imgImage: UIImageView!
+    @IBOutlet weak var toDoCard: UITextView!
+    
+    var location = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        imgImage.isUserInteractionEnabled = true
+        toDoCard.isUserInteractionEnabled = true
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
-        imgImage.addGestureRecognizer(swipeRight)
+         toDoCard.addGestureRecognizer(swipeRight)
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
-        imgImage.addGestureRecognizer(swipeLeft)
+         toDoCard.addGestureRecognizer(swipeLeft)
         
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.up
-        imgImage.addGestureRecognizer(swipeUp)
+         toDoCard.addGestureRecognizer(swipeUp)
         
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.down
-        imgImage.addGestureRecognizer(swipeDown)
+         toDoCard.addGestureRecognizer(swipeDown)
         
     }
 
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch: UITouch! = touches.first
+//        location = touch.location(in: self.view)
+//        toDoCard.center = location
+//        print("1")
+//    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch! = touches.first
+        location = touch.location(in: self.view)
+        toDoCard.center = location
+        print("2")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,16 +60,16 @@ class ViewController: UIViewController {
             switch swipeGesture.direction{
             case UISwipeGestureRecognizerDirection.right:
                 print("Right")
-                imgImage.image = UIImage(named: "2")
+                 toDoCard.text = "Right"
             case UISwipeGestureRecognizerDirection.left:
                 print("Left")
-                imgImage.image = UIImage(named: "3")
+                 toDoCard.text = "Left"
             case UISwipeGestureRecognizerDirection.up:
                 print("Up")
-                imgImage.image = UIImage(named: "4")
+                 toDoCard.text = "Up"
             case UISwipeGestureRecognizerDirection.down:
                 print("Down")
-                imgImage.image = UIImage(named: "1")
+                toDoCard.text = "Down"
             default:
                 break
             }
