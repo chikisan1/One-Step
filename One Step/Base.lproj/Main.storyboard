@@ -31,9 +31,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="6A1-Xv-FPf">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="P9J-9M-zUh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="apX-6m-EWY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x8a-ZJ-EJA">
+                                <rect key="frame" x="16" y="0.0" width="30" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="P9J-9M-zUh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q9G-IW-CTd">
-                                <rect key="frame" x="16" y="0.0" width="351" height="44"/>
+                                <rect key="frame" x="52" y="0.0" width="307" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1gk-B5-CjA"/>

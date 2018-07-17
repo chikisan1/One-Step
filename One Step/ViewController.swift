@@ -9,13 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var toDoCard: UITextView!
+    
+    
+    static var tableViewData = [Card]()
     
     var location = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    ViewController.tableViewData.append(Card(title: "3", date: Date(), priority: 3))
+    ViewController.tableViewData.append(Card(title: "1", date: Date(), priority: 1))
+    ViewController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
+        ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
         // Do any additional setup after loading the view, typically from a nib.
+        toDoCard.text = ViewController.tableViewData.first?.title
         toDoCard.isUserInteractionEnabled = true
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
