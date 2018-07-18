@@ -37,6 +37,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addNewCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSQ-eH-J6q"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="P9J-9M-zUh">

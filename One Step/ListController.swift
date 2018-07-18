@@ -29,6 +29,7 @@ class ListController: UITableViewController {
 //        ListController.tableViewData.append(Card(title: "1", date: Date(), priority: 1))
 //        ListController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
 //        ListController.tableViewData.sort(by: { $0.priority < $1.priority })
+        print(ViewController.tableViewData)
     }
     
     override func didReceiveMemoryWarning() {

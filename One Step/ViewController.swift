@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    ViewController.tableViewData.append(Card(title: "3", date: Date(), priority: 3))
-    ViewController.tableViewData.append(Card(title: "1", date: Date(), priority: 1))
-    ViewController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
+        ViewController.tableViewData.append(Card(title: "3", date: Date(), priority: 3))
+        ViewController.tableViewData.append(Card(title: "1", date: Date(), priority: 1))
+        ViewController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
         ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
         // Do any additional setup after loading the view, typically from a nib.
         toDoCard.text = ViewController.tableViewData.first?.title
@@ -60,6 +60,35 @@ class ViewController: UIViewController {
         toDoCard.center = location
         print("2")
     }
+    
+    @IBAction func addNewCard(_ sender: Any) {
+        let alert = UIAlertController(title: "Add New Card", message: nil, preferredStyle: .alert)
+        var newCard: String?
+        alert.addTextField{
+            (textfield) in textfield.placeholder = "Enter New Chore"
+            newCard = textfield.text
+            ViewController.tableViewData.append(Card(title: newCard!, date: Date(), priority: ViewController.tableViewData.count + 1))
+            ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
+            print(ViewController.tableViewData)
+        }
+        let okAction = UIAlertAction(title: "OK", style: .default){
+            (action) in print(ViewController.tableViewData)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
+            (action) in print("cancel")
+        }
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true)
+        
+        
+    }
+    
+//    func titleTextField(textField: UITextField!){
+//        newCardTitle = textField
+//        newCardTitle?.placeholder = "Enter New Chore"
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
