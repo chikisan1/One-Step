@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     
     static var tableViewData = [Card]()
+    var newCard: UITextField?
     
     var location = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
@@ -63,16 +64,17 @@ class ViewController: UIViewController {
     
     @IBAction func addNewCard(_ sender: Any) {
         let alert = UIAlertController(title: "Add New Card", message: nil, preferredStyle: .alert)
-        var newCard: String?
         alert.addTextField{
             (textfield) in textfield.placeholder = "Enter New Chore"
-            newCard = textfield.text
-            ViewController.tableViewData.append(Card(title: newCard!, date: Date(), priority: ViewController.tableViewData.count + 1))
-            ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
-            print(ViewController.tableViewData)
+             self.newCard = textfield
         }
         let okAction = UIAlertAction(title: "OK", style: .default){
-            (action) in print(ViewController.tableViewData)
+            (action) in
+            if self.newCard != nil || self.newCard?.text! != "" {
+                ViewController.tableViewData.append(Card(title: (self.newCard?.text!)!, date: Date(), priority: ViewController.tableViewData.count + 1))
+                ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
+            }
+            print(ViewController.tableViewData)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
             (action) in print("cancel")
