@@ -8,27 +8,11 @@
 
 import UIKit
 
-//struct cellData{
-//    var opened = Bool()
-//    var title = String()
-//    var sectionData = [String]()
-//}
-
 class ListController: UITableViewController {
-//    var toDoList: [String]?
-//    var tableViewData = [cellData]()
-//    static var tableViewData = [Card]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableViewData = [cellData(opened: false, title: "1", sectionData: ["cell1", "cell2", "cell3"]),
-//                         cellData(opened: false, title: "1", sectionData: ["cell1", "cell2", "cell3"]),
-//                         cellData(opened: false, title: "1", sectionData: ["cell1", "cell2", "cell3"]),
-//                         cellData(opened: false, title: "1", sectionData: ["cell1", "cell2", "cell3"])]
-//        ListController.tableViewData.append(Card(title: "3", date: Date(), priority: 3))
-//        ListController.tableViewData.append(Card(title: "1", date: Date(), priority: 1))
-//        ListController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
-//        ListController.tableViewData.sort(by: { $0.priority < $1.priority })
         print(ViewController.tableViewData)
     }
     
@@ -55,6 +39,7 @@ class ListController: UITableViewController {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {return UITableViewCell()}
             cell.textLabel?.text = ViewController.tableViewData[indexPath.section].title
+            cell.backgroundColor = ViewController.tableViewData[indexPath.section].color
             return cell
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {return UITableViewCell()}

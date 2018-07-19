@@ -27,8 +27,7 @@ class ViewController: UIViewController {
         ViewController.tableViewData.append(Card(title: "2", date: Date(), priority: 2))
         ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
         // Do any additional setup after loading the view, typically from a nib.
-        toDoCard.text = ViewController.tableViewData.first?.title
-        toDoCard.isUserInteractionEnabled = true
+        viewCard(curCard: ViewController.tableViewData.first!)
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
@@ -54,6 +53,23 @@ class ViewController: UIViewController {
 //        toDoCard.center = location
 //        print("1")
 //    }
+    
+    func viewCard(curCard: Card){
+        toDoCard.text = curCard.title
+        toDoCard.backgroundColor = curCard.color
+        toDoCard.isUserInteractionEnabled = true
+    }
+    
+    func updateView(){
+        if ViewController.tableViewData.count == 1 {
+            toDoCard.text = "Empty"
+            toDoCard.backgroundColor = UIColor.white
+            toDoCard.isUserInteractionEnabled = true
+        }else{
+            ViewController.tableViewData.remove(at: 0)
+            viewCard(curCard: ViewController.tableViewData.first!)
+        }
+    }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch! = touches.first
@@ -105,7 +121,8 @@ class ViewController: UIViewController {
                  toDoCard.text = "Right"
             case UISwipeGestureRecognizerDirection.left:
                 print("Left")
-                 toDoCard.text = "Left"
+//                 toDoCard.text = "Left"
+                updateView()
             case UISwipeGestureRecognizerDirection.up:
                 print("Up")
                  toDoCard.text = "Up"
