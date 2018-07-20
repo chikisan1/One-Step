@@ -46,13 +46,6 @@ class ViewController: UIViewController {
          toDoCard.addGestureRecognizer(swipeDown)
         
     }
-
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch: UITouch! = touches.first
-//        location = touch.location(in: self.view)
-//        toDoCard.center = location
-//        print("1")
-//    }
     
     func viewCard(curCard: Card){
         toDoCard.text = curCard.title
@@ -61,11 +54,18 @@ class ViewController: UIViewController {
     }
     
     func updateView(){
-        if ViewController.tableViewData.count == 1 {
+        if ViewController.tableViewData.isEmpty{
             toDoCard.text = "Empty"
             toDoCard.backgroundColor = UIColor.white
             toDoCard.isUserInteractionEnabled = true
-        }else{
+        }
+        if ViewController.tableViewData.count == 1{
+            ViewController.tableViewData.remove(at: 0)
+            toDoCard.text = "Empty"
+            toDoCard.backgroundColor = UIColor.white
+            toDoCard.isUserInteractionEnabled = true
+        }
+        else{
             ViewController.tableViewData.remove(at: 0)
             viewCard(curCard: ViewController.tableViewData.first!)
         }
@@ -103,10 +103,6 @@ class ViewController: UIViewController {
         
     }
     
-//    func titleTextField(textField: UITextField!){
-//        newCardTitle = textField
-//        newCardTitle?.placeholder = "Enter New Chore"
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,9 +116,11 @@ class ViewController: UIViewController {
                 print("Right")
                  toDoCard.text = "Right"
             case UISwipeGestureRecognizerDirection.left:
-                print("Left")
+                if !ViewController.tableViewData.isEmpty{
+                    updateView()
+                }
+                print(ViewController.tableViewData.count)
 //                 toDoCard.text = "Left"
-                updateView()
             case UISwipeGestureRecognizerDirection.up:
                 print("Up")
                  toDoCard.text = "Up"

@@ -38,7 +38,7 @@ class ListController: UITableViewController {
         let dataIndex = indexPath.row - 1
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {return UITableViewCell()}
-            cell.textLabel?.text = ViewController.tableViewData[indexPath.section].title
+            cell.textLabel?.text = String(ViewController.tableViewData[indexPath.section].priority) + "    " + ViewController.tableViewData[indexPath.section].title
             cell.backgroundColor = ViewController.tableViewData[indexPath.section].color
             return cell
         }else{
