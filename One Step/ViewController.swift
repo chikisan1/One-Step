@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-
     @IBOutlet weak var toDoCard: UITextView!
     
     
@@ -89,6 +87,9 @@ class ViewController: UIViewController {
             if self.newCard != nil || self.newCard?.text! != "" {
                 ViewController.tableViewData.append(Card(title: (self.newCard?.text!)!, date: Date(), priority: ViewController.tableViewData.count + 1))
                 ViewController.tableViewData.sort(by: { $0.priority < $1.priority })
+            }
+            if ViewController.tableViewData.count == 1{
+                self.viewCard(curCard: ViewController.tableViewData.first!)
             }
             print(ViewController.tableViewData)
         }
