@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:One Step.xcodeproj">
+      location = "self:/Users/chikaomaeda/Desktop/Swift/One Step/Qcards.xcodeproj">
    </FileRef>
 </Workspace>

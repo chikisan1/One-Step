@@ -14,10 +14,11 @@
 		BC2C5EAC20E1C84100308D76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2C5EAA20E1C84100308D76 /* LaunchScreen.storyboard */; };
 		BC2C5EB420E3069C00308D76 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C5EB320E3069C00308D76 /* ListController.swift */; };
 		BC46464620FD70BA00113152 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC46464520FD70BA00113152 /* Card.swift */; };
+		BC88DE3221078D3D002EEC5A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC88DE3121078D3D002EEC5A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC2C5E9E20E1C84100308D76 /* One Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "One Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C5E9E20E1C84100308D76 /* Qcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2C5EA120E1C84100308D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC2C5EA320E1C84100308D76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC2C5EA620E1C84100308D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		BC2C5EAD20E1C84100308D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2C5EB320E3069C00308D76 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		BC46464520FD70BA00113152 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BC88DE3121078D3D002EEC5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,8 @@
 		BC2C5E9520E1C84100308D76 = {
 			isa = PBXGroup;
 			children = (
-				BC2C5EA020E1C84100308D76 /* One Step */,
+				BC88DE3121078D3D002EEC5A /* Default-568h@2x.png */,
+				BC2C5EA020E1C84100308D76 /* Qcards */,
 				BC2C5E9F20E1C84100308D76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +53,12 @@
 		BC2C5E9F20E1C84100308D76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC2C5E9E20E1C84100308D76 /* One Step.app */,
+				BC2C5E9E20E1C84100308D76 /* Qcards.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC2C5EA020E1C84100308D76 /* One Step */ = {
+		BC2C5EA020E1C84100308D76 /* Qcards */ = {
 			isa = PBXGroup;
 			children = (
 				BC2C5EA120E1C84100308D76 /* AppDelegate.swift */,
@@ -67,15 +70,15 @@
 				BC2C5EAD20E1C84100308D76 /* Info.plist */,
 				BC2C5EB320E3069C00308D76 /* ListController.swift */,
 			);
-			path = "One Step";
+			path = Qcards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC2C5E9D20E1C84100308D76 /* One Step */ = {
+		BC2C5E9D20E1C84100308D76 /* Qcards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC2C5EB020E1C84100308D76 /* Build configuration list for PBXNativeTarget "One Step" */;
+			buildConfigurationList = BC2C5EB020E1C84100308D76 /* Build configuration list for PBXNativeTarget "Qcards" */;
 			buildPhases = (
 				BC2C5E9A20E1C84100308D76 /* Sources */,
 				BC2C5E9B20E1C84100308D76 /* Frameworks */,
@@ -85,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "One Step";
+			name = Qcards;
 			productName = "One Step";
-			productReference = BC2C5E9E20E1C84100308D76 /* One Step.app */;
+			productReference = BC2C5E9E20E1C84100308D76 /* Qcards.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC2C5E9920E1C84100308D76 /* Build configuration list for PBXProject "One Step" */;
+			buildConfigurationList = BC2C5E9920E1C84100308D76 /* Build configuration list for PBXProject "Qcards" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC2C5E9D20E1C84100308D76 /* One Step */,
+				BC2C5E9D20E1C84100308D76 /* Qcards */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2C5EAC20E1C84100308D76 /* LaunchScreen.storyboard in Resources */,
+				BC88DE3221078D3D002EEC5A /* Default-568h@2x.png in Resources */,
 				BC2C5EA920E1C84100308D76 /* Assets.xcassets in Resources */,
 				BC2C5EA720E1C84100308D76 /* Main.storyboard in Resources */,
 			);
@@ -284,7 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LU8Y7N57AB;
-				INFOPLIST_FILE = "One Step/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Qcards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chikao.projects.One-Step";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,7 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LU8Y7N57AB;
-				INFOPLIST_FILE = "One Step/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Qcards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chikao.projects.One-Step";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC2C5E9920E1C84100308D76 /* Build configuration list for PBXProject "One Step" */ = {
+		BC2C5E9920E1C84100308D76 /* Build configuration list for PBXProject "Qcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC2C5EAE20E1C84100308D76 /* Debug */,
@@ -320,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC2C5EB020E1C84100308D76 /* Build configuration list for PBXNativeTarget "One Step" */ = {
+		BC2C5EB020E1C84100308D76 /* Build configuration list for PBXNativeTarget "Qcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC2C5EB120E1C84100308D76 /* Debug */,
